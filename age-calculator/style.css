@@ -457,6 +457,7 @@ body {
     .results-card {
         padding: 1.5rem;
         border-radius: 15px;
+        margin: 0.5rem 0;
     }
     
     .age-value {
@@ -467,6 +468,7 @@ body {
     .milestone-card,
     .fact-card {
         padding: 1.25rem;
+        margin: 0.5rem 0;
     }
     
     .breakdown-icon {
@@ -492,9 +494,48 @@ body {
     .countdown-value {
         font-size: 2rem;
     }
+    
+    .age-breakdown .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .life-milestones .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .fun-facts .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .form-input {
+        width: 100%;
+        padding: 0.875rem;
+        font-size: 1rem;
+        min-height: 44px;
+    }
+    
+    .calculate-btn,
+    .reset-btn {
+        width: 100%;
+        padding: 0.875rem;
+        font-size: 1rem;
+        min-height: 50px;
+    }
+    
+    .quick-facts {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0.75rem;
+    }
+    
     .calculator-card,
     .results-card {
         padding: 1rem;
@@ -539,49 +580,116 @@ body {
     .milestone-title {
         font-size: 1.25rem;
     }
+    
+    .age-breakdown .grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .fun-facts .grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .form-input {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+    
+    .calculate-btn,
+    .reset-btn {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+        min-height: 45px;
+    }
+    
+    .quick-facts {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
 }
 
-/* Footer Mobile Responsive */
-@media (max-width: 768px) {
-    .footer {
-        padding: 2rem 1rem !important;
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .form-input {
+        min-height: 44px;
+        padding: 0.875rem;
+        font-size: 1rem;
     }
     
-    .footer .grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 1.5rem !important;
+    .calculate-btn,
+    .reset-btn {
+        min-height: 50px;
+        padding: 1rem;
+        font-size: 1rem;
     }
     
-    .footer .text-center.ml-10.md\:ml-0 {
-        margin-left: 0 !important;
+    .breakdown-card,
+    .milestone-card,
+    .fact-card {
+        padding: 1.25rem;
+    }
+    
+    .countdown-item {
+        min-height: 60px;
+        padding: 1rem;
     }
 }
 
-@media (max-width: 480px) {
-    .footer {
-        padding: 1.5rem 0.75rem !important;
+/* Landscape mobile fixes */
+@media (max-width: 768px) and (orientation: landscape) {
+    .container {
+        padding: 0.5rem;
     }
     
-    .footer .grid {
-        grid-template-columns: 1fr !important;
-        gap: 1rem !important;
+    .calculator-card,
+    .results-card {
+        padding: 1rem;
     }
     
-    .footer-title {
-        font-size: 1rem !important;
-        margin-bottom: 0.75rem !important;
+    .age-breakdown .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
     }
     
-    .footer .space-y-2 {
-        font-size: 0.85rem;
+    .life-milestones .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
     }
     
-    .copyright-footer {
-        padding: 1rem 0.75rem !important;
+    .fun-facts .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
     }
     
-    .copyright-footer p {
-        font-size: 0.75rem !important;
+    .breakdown-card,
+    .milestone-card,
+    .fact-card {
+        padding: 0.75rem;
+    }
+    
+    .breakdown-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .milestone-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .countdown-container {
+        gap: 0.5rem;
+    }
+    
+    .countdown-item {
+        padding: 0.75rem;
+    }
+    
+    .countdown-value {
+        font-size: 1.5rem;
     }
 }
 

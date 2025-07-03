@@ -1,0 +1,601 @@
+/* Responsive CSS for All Pages */
+
+/* Base responsive fixes */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+    /* Navigation fixes */
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+    
+    .navbar .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .dropdown-content {
+        max-width: 280px;
+        width: 100vw;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 1rem;
+    }
+    
+    /* Hero section fixes */
+    .hero {
+        min-height: 100vh;
+        padding: 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem !important;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem !important;
+        line-height: 1.5;
+    }
+    
+    /* Container and grid fixes */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .grid {
+        gap: 1rem;
+    }
+    
+    /* Card fixes */
+    .card {
+        margin: 0.5rem 0;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    /* Calculator specific fixes */
+    .calculator-container {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    
+    .calculator {
+        width: 100%;
+    }
+    
+    .calculator .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .calculator .btn {
+        padding: 0.75rem 0.5rem;
+        font-size: 1rem;
+        min-height: 50px;
+    }
+    
+    .calculator .btn.col-span-2 {
+        grid-column: span 2;
+    }
+    
+    /* BMI Calculator fixes */
+    .calculator-card,
+    .results-card {
+        margin: 0.5rem 0;
+        padding: 1rem;
+    }
+    
+    .input-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .form-input,
+    .unit-select {
+        width: 100%;
+        margin: 0;
+    }
+    
+    /* Age Calculator fixes */
+    .age-breakdown .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .breakdown-card {
+        padding: 0.75rem;
+    }
+    
+    .breakdown-value {
+        font-size: 1.5rem;
+    }
+    
+    /* Team page fixes */
+    .team-member {
+        margin: 0.5rem 0;
+        padding: 1rem;
+    }
+    
+    .team-member img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .team-member h3 {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    
+    /* Footer fixes */
+    .footer {
+        padding: 2rem 1rem !important;
+    }
+    
+    .footer .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+        justify-items: center !important;
+        align-items: center !important;
+    }
+    
+    .footer .text-center.ml-10.md\:ml-0 {
+        margin-left: 0 !important;
+        text-align: center !important;
+    }
+    
+    .footer .grid > div {
+        text-align: center !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 250px !important;
+    }
+    
+    .footer .flex.justify-center.sm\:justify-start {
+        justify-content: center !important;
+    }
+    
+    .footer-title {
+        text-align: center !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    /* Text size adjustments */
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    p {
+        font-size: 0.875rem !important;
+    }
+    
+    /* Button fixes */
+    .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+        white-space: nowrap;
+    }
+    
+    /* Form fixes */
+    .form-input,
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    textarea,
+    select {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+    }
+    
+    /* Modal fixes */
+    .modal-box {
+        margin: 1rem;
+        max-width: calc(100vw - 2rem);
+        max-height: calc(100vh - 2rem);
+    }
+    
+    /* Slider fixes */
+    .slider-nav {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .slider-nav i {
+        font-size: 1rem;
+    }
+    
+    /* Stats fixes */
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .stat {
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    /* Service cards fixes */
+    .service-card {
+        margin: 0.5rem 0;
+        padding: 1rem;
+    }
+    
+    /* Portfolio fixes */
+    .portfolio-card {
+        margin: 0.5rem 0;
+    }
+    
+    /* Contact form fixes */
+    .contact-form {
+        padding: 1rem;
+    }
+    
+    .contact-form .form-control {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 1.5rem 0.75rem !important;
+    }
+    
+    .footer .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        justify-items: center !important;
+        align-items: center !important;
+    }
+    
+    .footer .grid > div {
+        text-align: center !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 280px !important;
+    }
+    
+    .footer-title {
+        font-size: 1rem !important;
+        margin-bottom: 0.75rem !important;
+        text-align: center !important;
+    }
+    
+    .footer .space-y-2 {
+        font-size: 0.85rem;
+        text-align: center !important;
+    }
+    
+    .footer .space-y-2 a {
+        text-align: center !important;
+        display: block !important;
+    }
+    
+    .copyright-footer {
+        padding: 1rem 0.75rem !important;
+        text-align: center !important;
+    }
+    
+    .copyright-footer p {
+        font-size: 0.75rem !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+    
+    .footer .flex.space-x-4 {
+        justify-content: center !important;
+        gap: 1rem !important;
+    }
+}
+
+/* Tablet responsive fixes */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem !important;
+    }
+    
+    .calculator-container {
+        max-width: 450px;
+    }
+    
+    .age-breakdown .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .hero-content h1 {
+        font-size: 4rem !important;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn {
+        min-height: 44px;
+        padding: 0.875rem 1.25rem;
+    }
+    
+    .calculator .btn {
+        min-height: 60px;
+    }
+    
+    .dropdown-content {
+        padding: 0.75rem;
+    }
+    
+    .dropdown-content li a {
+        padding: 0.75rem 1rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Landscape mobile fixes */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: 0.5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.875rem !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    .pt-20 {
+        padding-top: 4rem;
+    }
+    
+    .pt-32 {
+        padding-top: 5rem;
+    }
+}
+
+/* High DPI display fixes */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-slider img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .footer,
+    .btn,
+    .slider-nav,
+    .dropdown {
+        display: none !important;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding: 1rem;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for better accessibility */
+.btn:focus,
+.form-input:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .bg-base-100 {
+        background-color: #1f2937;
+    }
+    
+    .text-black {
+        color: #f9fafb;
+    }
+}
+
+/* Specific fixes for calculator pages */
+.calculator-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-page .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Fix for mobile menu dropdown */
+@media (max-width: 768px) {
+    details[open] summary ~ * {
+        animation: slideDown 0.3s ease-out;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Ensure dropdown doesn't overflow screen */
+    .dropdown-content {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}
+
+/* Fix for Bengali text rendering */
+.font-baloo {
+    font-family: 'Baloo Da 2', cursive;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Ensure proper spacing for Bengali messages */
+#bengali-fun-message {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    #bengali-fun-message {
+        margin-top: 1rem;
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+    
+    #bengali-fun-message .text-lg {
+        font-size: 1rem !important;
+    }
+}
+
+.footer .flex.space-x-4 {
+    justify-content: center !important;
+    gap: 1rem !important;
+}
+
+/* Additional footer centering fixes */
+.footer .flex.justify-center.sm\:justify-start.space-x-4 {
+    justify-content: center !important;
+    gap: 1rem !important;
+}
+
+.footer .flex.justify-center.sm\:justify-start.space-x-4 a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.footer .space-y-2 a.link.link-hover.block {
+    text-align: center !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/* Global Footer Centering Improvements */
+.footer {
+    text-align: center;
+}
+
+.footer .grid {
+    justify-items: center;
+    align-items: center;
+}
+
+.footer .grid > div {
+    text-align: center;
+}
+
+.footer .text-center.sm\:text-left,
+.footer .text-center.ml-10.md\:ml-0 {
+    text-align: center !important;
+    margin-left: 0 !important;
+}
+
+.footer .flex.justify-center.sm\:justify-start {
+    justify-content: center !important;
+}
+
+.footer-title {
+    text-align: center !important;
+}
+
+.footer .space-y-2 {
+    text-align: center;
+}
+
+.footer .space-y-2 a {
+    text-align: center;
+    display: block;
+}
+
+.copyright-footer {
+    text-align: center !important;
+}
+
+.copyright-footer p {
+    text-align: center !important;
+    margin: 0 auto !important;
+} 

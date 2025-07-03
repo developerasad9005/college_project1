@@ -420,6 +420,7 @@ body {
     .results-card {
         padding: 1.5rem;
         border-radius: 15px;
+        margin: 0.5rem 0;
     }
     
     .bmi-value {
@@ -434,11 +435,26 @@ body {
     .form-input,
     .unit-select {
         width: 100%;
+        padding: 0.875rem;
+        font-size: 1rem;
+    }
+    
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .form-input,
+    .unit-select {
+        width: 100%;
+        margin: 0;
     }
     
     .category-card,
     .tip-card {
         padding: 1.25rem;
+        margin: 0.5rem 0;
     }
     
     .category-icon {
@@ -452,9 +468,31 @@ body {
         height: 60px;
         font-size: 1.75rem;
     }
+    
+    .bmi-categories .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .health-tips .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .calculate-btn,
+    .reset-btn {
+        width: 100%;
+        padding: 0.875rem;
+        font-size: 1rem;
+        min-height: 50px;
+    }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0.75rem;
+    }
+    
     .calculator-card,
     .results-card {
         padding: 1rem;
@@ -489,6 +527,85 @@ body {
     
     .tip-title {
         font-size: 1.25rem;
+    }
+    
+    .bmi-categories .grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .form-input,
+    .unit-select {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+    
+    .calculate-btn,
+    .reset-btn {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+        min-height: 45px;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .form-input,
+    .unit-select {
+        min-height: 44px;
+        padding: 0.875rem;
+        font-size: 1rem;
+    }
+    
+    .calculate-btn,
+    .reset-btn {
+        min-height: 50px;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .category-card,
+    .tip-card {
+        padding: 1.25rem;
+    }
+}
+
+/* Landscape mobile fixes */
+@media (max-width: 768px) and (orientation: landscape) {
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .calculator-card,
+    .results-card {
+        padding: 1rem;
+    }
+    
+    .bmi-categories .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .health-tips .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .category-card,
+    .tip-card {
+        padding: 0.75rem;
+    }
+    
+    .category-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .tip-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
     }
 }
 
